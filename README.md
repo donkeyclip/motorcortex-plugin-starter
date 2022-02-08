@@ -1,5 +1,12 @@
-# motorcortex-plugin-starter
-
+# MotorCortex-plugin-starter
+**Table of Contents**
+- [MotorCortex-plugin-starter](#motorcortex-plugin-starter)
+  - [Purpose](#purpose)
+  - [Structure and Contents](#structure-and-contents)
+  - [How to use](#how-to-use)
+  - [Commands](#commands)
+  - [License](#license)
+  - [Sponsored by](#sponsored-by)
 ## Purpose
 
 A starter plugin for creating MotorCortex plugins.
@@ -42,3 +49,9 @@ Also, it's imortant to change your package.json file so you can name your pluign
 - `npm start:demo`: just starts the demo
 
 ## Have fun!!!
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+## Sponsored by
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
