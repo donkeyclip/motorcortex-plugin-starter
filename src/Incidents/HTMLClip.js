@@ -1,4 +1,5 @@
-import { HTMLClip } from "@donkeyclip/motorcortex";
+// eslint-disable-next-line no-unused-vars
+import { HTMLClip, JSX } from "@donkeyclip/motorcortex";
 
 /**
  * The purpose of extending the HTMLClip is to full, parametric
@@ -13,7 +14,7 @@ import { HTMLClip } from "@donkeyclip/motorcortex";
  */
 export default class MyHTMLClip extends HTMLClip {
   get html() {
-    return "<div></div>";
+    return <div></div>;
   }
 
   get css() {

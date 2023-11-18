@@ -13,7 +13,23 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
-    plugins: [resolve(), commonjs(), babel(), json()],
+    plugins: [
+      resolve(),
+      babel({
+        plugins: [
+          "@babel/plugin-syntax-jsx",
+          [
+            "@babel/plugin-transform-react-jsx",
+            {
+              pragma: "JSX",
+            },
+          ],
+        ],
+        extensions: [".js", ".jsx"],
+      }),
+      commonjs(),
+      json(),
+    ],
   },
   {
     input: "src/index.js",
@@ -31,8 +47,19 @@ export default [
     plugins: [
       json(),
       resolve({ mainFields: ["module", "main", "browser"] }),
+      babel({
+        plugins: [
+          "@babel/plugin-syntax-jsx",
+          [
+            "@babel/plugin-transform-react-jsx",
+            {
+              pragma: "JSX",
+            },
+          ],
+        ],
+        extensions: [".js", ".jsx"],
+      }),
       commonjs(),
-      babel(),
       terser(),
     ],
   },
