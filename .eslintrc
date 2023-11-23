@@ -1,12 +1,19 @@
 {
   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
   "extends": [
     "eslint:recommended",
+    "plugin:react/recommended",
     "prettier"
   ],
   "plugins": [
     "babel",
-    "prettier"
+    "prettier",
+    "react"
   ],
   "env": {
     "browser": true,
@@ -55,6 +62,8 @@
       }
     ],
     "no-var": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off"
   }
 }

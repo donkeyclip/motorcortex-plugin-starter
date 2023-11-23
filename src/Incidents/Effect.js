@@ -59,5 +59,6 @@ export default class MyEffect extends Effect {
    * applied before reaching the execution of this method. This method's
    * arguments have already been re-calculated based on the easing.
    **/
+  // eslint-disable-next-line no-unused-vars
   onProgress(fraction, millisecond) {}
 }

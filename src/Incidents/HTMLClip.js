@@ -14,7 +14,7 @@ import { HTMLClip, JSX } from "@donkeyclip/motorcortex";
  */
 export default class MyHTMLClip extends HTMLClip {
   get html() {
-    return <div></div>;
+    return <div>Test</div>;
   }
 
   get css() {
