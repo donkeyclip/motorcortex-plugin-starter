@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.27.2",
     "@babel/preset-react": "^7.27.1",
     "@donkeyclip/motorcortex": "^9.22.1",
-    "@donkeyclip/motorcortex-player": "2.15.12",
+    "@donkeyclip/motorcortex-player": "2.15.14",
     "@rollup/plugin-babel": "6.0.4",
     "@rollup/plugin-commonjs": "28.0.6",
     "@rollup/plugin-json": "6.1.0",
