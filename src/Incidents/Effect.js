@@ -51,14 +51,12 @@ export default class MyEffect extends Effect {
   onGetContext() {}
 
   /**
-   * Takes two arguments the "fraction" which is a number from 0 to 1, representing
-   * the fraction (the percentage) of the duration that we are in,
-   * and the millisecond which defines the absolute millisecond.
+   * Takes one argument the millisecond which defines the absolute millisecond.
    * You can use this method to animate your attribute.
    * Remember that you don't need to worry about easings. Easings are already
    * applied before reaching the execution of this method. This method's
    * arguments have already been re-calculated based on the easing.
    **/
   // eslint-disable-next-line no-unused-vars
-  onProgress(fraction, millisecond) {}
+  onProgress(millisecond) {}
 }
