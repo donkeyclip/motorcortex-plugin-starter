@@ -73,7 +73,7 @@
     "lint-staged": "^16.1.0",
     "prettier": "3.7.4",
     "rimraf": "6.1.2",
-    "rollup": "4.53.3",
+    "rollup": "4.53.4",
     "webpack": "^5.99.9",
     "webpack-cli": "6.0.1",
     "webpack-dev-server": "5.2.2"
