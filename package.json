@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^7.37.5",
     "husky": "9.1.7",
     "lint-staged": "^16.1.0",
-    "prettier": "3.8.0",
+    "prettier": "3.8.1",
     "rimraf": "6.1.2",
     "rollup": "4.55.3",
     "webpack": "^5.99.9",
