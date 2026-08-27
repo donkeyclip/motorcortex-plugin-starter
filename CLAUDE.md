@@ -8,6 +8,24 @@ a timeline; anything you can put on that timeline is an **Incident** (Effects, A
 other Clips). Every Clip must stay playable, dynamic, parametric, isolated and **portable** (JSON
 serializable).
 
+## 🚧 This repo is a template — you are building a NEW plugin
+
+Starting from this repo means creating a new, separate plugin project, NOT contributing to the
+boilerplate itself:
+
+- **Remote:** if `git remote get-url origin` still points to
+  `donkeyclip/motorcortex-plugin-starter`, ask the user for the new plugin's repository URL before
+  the first commit/push and set it with `git remote set-url origin <url>`. NEVER push plugin work
+  to the starter's remote.
+- **Identity:** update `package.json` (`name`, `description`, `repository`) to the new plugin's
+  identity — the manifest's `npm_name` follows automatically via its `package.json` import.
+- **Boilerplate incidents are examples only:** `src/Incidents/Effect.js`, `Combo.js`,
+  `HTMLClip.js` and `Clip.js` are empty reference stubs, and `src/index.js` exports all four only
+  to demonstrate the manifest shape. Keep and rename just the ones your plugin actually
+  implements, DELETE the rest, and make `src/index.js` export only real incidents/clips. A
+  finished plugin must never export empty do-nothing stubs. Update `demo/index.js` to match what
+  the plugin really exports.
+
 ## 📚 Documentation map — read the relevant file before writing code
 
 Detailed docs live in `.ai/`. Load only what the task needs; `.ai/README.md` is the index.
@@ -93,8 +111,9 @@ export default {
 ## Repo layout
 
 - `src/index.js` — the plugin manifest: everything the plugin exposes.
-- `src/Incidents/` — one file per exportable Incident. Ships with empty boilerplates:
-  `Effect.js`, `Combo.js`, `Clip.js`, `HTMLClip.js`.
+- `src/Incidents/` — one file per exportable Incident. Ships with empty example stubs
+  (`Effect.js`, `Combo.js`, `Clip.js`, `HTMLClip.js`) — keep only what you implement, delete the
+  rest (see the template section above).
 - `demo/` — local demo app for trying the plugin out.
 - `package.json` — keep `name` (= `npm_name`) and `version` up to date; declare dependencies here.
 

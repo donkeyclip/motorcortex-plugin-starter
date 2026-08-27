@@ -13,9 +13,12 @@ Incidents available to developers. Without it your plugin just can’t be loaded
   exposed incident. A special key `Clip` exposes custom clips (if any) by the plugin.
 - `src/Incidents/` — where all of the exportable incidents should live. The boilerplate repo comes
   with 4 preset, empty boilerplate incidents to get you started (`Effect.js`, `Combo.js`,
-  `Clip.js`, `HTMLClip.js`).
+  `Clip.js`, `HTMLClip.js`). **These are examples, not part of any real plugin:** keep and rename
+  only the ones your plugin implements, delete the rest, and prune the corresponding entries from
+  `src/index.js` — the finished manifest must export only real incidents/clips.
 - `package.json` — always make sure the name of the plugin and its version are up to date. Also
-  there's the right place to declare any dependencies.
+  there's the right place to declare any dependencies. When starting a new plugin from the
+  boilerplate, set `name`, `description` and `repository` to the new plugin's identity first.
 - `demo/` — the local demo app used by `npm start`.
 
 ## The exported object
