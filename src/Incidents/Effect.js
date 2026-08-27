@@ -51,14 +51,18 @@ export default class MyEffect extends Effect {
   onGetContext() {}
 
   /**
-   * Takes two arguments the "fraction" which is a number from 0 to 1, representing
-   * the fraction (the percentage) of the duration that we are in,
-   * and the millisecond which defines the absolute millisecond.
+   * Takes a single argument: the millisecond within the Incident.
    * You can use this method to animate your attribute.
+   * If you need the fraction (a number from 0 to 1 representing the
+   * percentage of the duration we are in) use this.getFraction(millisecond).
    * Remember that you don't need to worry about easings. Easings are already
-   * applied before reaching the execution of this method. This method's
-   * arguments have already been re-calculated based on the easing.
+   * applied before reaching the execution of this method: the millisecond
+   * passed here has already been re-calculated based on the easing, so
+   * getFraction returns the eased fraction. Never re-apply easing yourself.
+   * IMPORTANT: this method must stay a pure, stateless function of the
+   * millisecond — the timeline can be scrubbed backward, so it will also be
+   * called with decreasing values.
    **/
   // eslint-disable-next-line no-unused-vars
-  onProgress(fraction, millisecond) {}
+  onProgress(millisecond) {}
 }
